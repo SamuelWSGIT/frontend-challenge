@@ -30,7 +30,15 @@ function HomePage() {
   return (
     <div className="flex min-h-screen overflow-hidden bg-gradient-to-r motograu-game">
       <div className="flex w-full sm:gap-3 min-h-screen relative">
-        <section className="flex flex-col h-full grow p-0">
+        <section className="flex flex-col h-full grow p-0 box-border">
+          <div className="absolute pt-14 grow w-full">
+            <Results />
+          </div>
+          <iframe
+            ref={iframeRef}
+            className="rounded-md overflow-hidden absolute w-full h-full pointer-events-none min-h-[250px] sm:min-h-[300px]"
+            src="/motograu/index.html"
+          ></iframe>
           <div className="" style={{ zIndex: 100 }}>
             <Navbar
               game="motograu"
@@ -38,27 +46,17 @@ function HomePage() {
               balance={balance}
             />
           </div>
-          <div className="grid p-3 gap-3 grow rounded w-full grid-cols-12">
+          <div className="grid px-3 gap-x-3 grow rounded w-full grid-cols-12">
             <div className="col-span-12 sm:col-span-4 grow xl:col-span-3 order-2 sm:order-1">
               <TransactionBar />
             </div>
 
             <div className="col-span-12 sm:col-span-8 xl:col-span-9 relative order-1 sm:order-1 lg:order-2">
-              <div className="flex gap-3 h-full flex-col">
-                <Results />
-
-                <div className="grow relative z-0">
-                  <iframe
-                    ref={iframeRef}
-                    className="rounded-md overflow-hidden w-full h-full pointer-events-none min-h-[250px] sm:min-h-[300px]"
-                    src="/motograu/index.html"
-                  ></iframe>
-                  <div className="transform sm:translate-y-[-390px] translate-y-[-200px]">
-                    <Display color={'pink'} />
-                  </div>
-                </div>
-
+              <div className="flex gap-3 p-1 h-full flex-col-reverse">
                 <Controls color="lime" position={'center'} />
+                <div className="transform sm:translate-y-[-580px] sm:translate-x-[-100px] translate-y-[-200px] ">
+                  <Display color={'yellow'} />
+                </div>
               </div>
 
               <Snackbar />
