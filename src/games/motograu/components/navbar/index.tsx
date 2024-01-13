@@ -125,7 +125,7 @@ export default function Navbar({
             </button>
 
             {isDropdownOpen && (
-              <div className="mt-2 menu menu-compact bg-black bg-opacity-80 rounded py-2 w-[280px] max-w-[300px] absolute top-[30px] right-[30px] z-10">
+              <div className="mt-2 menu menu-compact bg-black bg-opacity-80 rounded py-2 w-[280px] max-w-[300px] absolute top-[125px] right-[290px] z-10">
                 <div className="flex gap-4 p-4">
                   <img
                     src="https://api.multiavatar.com/NOME.svg"
