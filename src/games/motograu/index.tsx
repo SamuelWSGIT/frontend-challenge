@@ -9,7 +9,7 @@ import Controls from '@/core/components/controls/crash-control'
 import { CrashGameContext } from '@/core/providers/games/crash-game.provider'
 import { SessionContext } from '@/core/providers/session.provider'
 import { GameStatus } from '@/core/providers/enums/game-status'
-import Navbar from '@/core/components/navbar'
+import Navbar from './components/navbar'
 
 function HomePage() {
   const { setLoading } = useContext<any>(SessionContext)

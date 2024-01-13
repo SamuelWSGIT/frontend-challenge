@@ -17,7 +17,7 @@ import {
   ChatBubbleLeftIcon,
 } from '@heroicons/react/24/outline'
 import { getGameLogo, getHowToPlay } from '@/core/helpers'
-import GameLimitsModal from '../provably-fair/game-limits'
+import GameLimitsModal from '@/core/components/provably-fair/game-limits'
 import { Chat } from '../chat'
 
 export default function Navbar({
@@ -109,23 +109,23 @@ export default function Navbar({
             <span className="hidden sm:inline">Como Jogar?</span>
           </button>
 
-          <div className="text-sm text-center font-bold mr-1">
+          <div className="text-sm text-center font-bold mr-1 p-1.5 text-lime-300 bg-black rounded">
             <span className="player-currency">R$</span>{' '}
             <span className="balance">{balance}</span>
           </div>
 
-          <div className="border-l h-6 border-gray-400 border-opacity-50"></div>
+          <div className="border-l h-6 border-gray-100"></div>
 
           <div className="dropdown dropdown-end" ref={dropdownRef}>
             <button
               onClick={toggleDropdown}
               className="btn btn-sm px-1 btn-ghost"
             >
-              <Bars3Icon className="w-6 h-6 bg-opacity-50" />
+              <Bars3Icon className="w-8 h-8 my-1 bg-black rounded" />
             </button>
 
             {isDropdownOpen && (
-              <div className="mt-2 menu menu-compact rounded py-2 w-[280px] max-w-[300px] absolute top-[30px] right-[30px] z-10">
+              <div className="mt-2 menu menu-compact bg-black bg-opacity-80 rounded py-2 w-[280px] max-w-[300px] absolute top-[30px] right-[30px] z-10">
                 <div className="flex gap-4 p-4">
                   <img
                     src="https://api.multiavatar.com/NOME.svg"
@@ -220,7 +220,7 @@ export default function Navbar({
           </div>
 
           <button
-            className="btn btn-sm px-1 btn-ghost"
+            className="btn btn-sm px-1 bg-black"
             onClick={() => {
               setShowChat(!showChat)
               soundClick()

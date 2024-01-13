@@ -29,9 +29,9 @@ export default function Display({ color }: Props) {
       <If condition={gameStatus == GameStatus.RUNNING}>
         <div className="relative flex justify-center items-center">
           <h1
-            className="text-6xl md:text-6xl lg:text-6xl font-bold text-gray-200 drop-shadow"
+            className="text-6xl md:text-6xl lg:text-6xl font-bold text-lime-400 drop-shadow"
             style={{
-              WebkitTextStroke: '1px #000',
+              WebkitTextStroke: '2px #000',
             }}
           >
             {multiplier?.toFixed(2)}x
@@ -44,7 +44,7 @@ export default function Display({ color }: Props) {
           <h1
             className="text-2xl md:text-3xl uppercase lg:text-3xl font-bold text-gray-200 drop-shadow"
             style={{
-              WebkitTextStroke: '1px #000',
+              WebkitTextStroke: '2px #000',
             }}
           >
             Em manutenção!
@@ -54,17 +54,17 @@ export default function Display({ color }: Props) {
 
       <If condition={gameStatus == GameStatus.GAME_OVER}>
         <h1
-          className="text-2xl sm:text-2xl text-gray-200 font-extrabold uppercase "
+          className="text-2xl sm:text-2xl text-gray-200 font-semibold uppercase "
           style={{
             WebkitTextStroke: '1px #000',
           }}
         >
-          O piloto caiu!
+          O Caramelo te derrubou!
         </h1>
         <h1
           className={`text-6xl md:text-6xl lg:text-6xl font-bold text-red-600 drop-shadow`}
           style={{
-            WebkitTextStroke: '1px #000',
+            WebkitTextStroke: '2px #000',
           }}
         >
           {multiplier.toFixed(2)}x
