@@ -34,7 +34,7 @@ Este projeto contém a aplicação das interfaces dos jogos **WallStreet** e **M
 
 ### 1. Clone o repositório:
 ```bash
-git clone https://github.com/hypetechgames/frontend-challenge
+git clone https://github.com/SamuelWSGIT/frontend-challenge.git
 ```
 
 ### 2. Instale as dependências e inicie o projeto
