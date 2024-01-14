@@ -1,10 +1,5 @@
 ## Desafio ( FrontEnd Challenge )
-
-# Antes
-
-![UI MotoGrau](https://i.ibb.co/42BnW3g/MotoGrau.png)
-
-# Depois
+# Motograu
 
 ![Logo do projeto](https://github.com/SamuelWSGIT/frontend-challenge/blob/master/src/assets/imagens/capa1.png)
 
